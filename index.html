@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="Navis Michael Bearly J">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Autodesk login page</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/my-login.css">
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+</head>
+
+<body class="my-login-page">
+
+	<!-- Then put toasts within -->
+	<div id="toast-cover" aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center">
+	  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+	    <div class="toast-body">
+	      Account Created Successfully
+	    </div>
+	  </div>
+	</div>
+<!--	</div>-->
+
+
+	<section class="h-100">
+
+
+
+
+		<div class="container h-100">
+			<div class="row justify-content-center h-100">
+				<div class="card-wrapper"  >
+
+					<div id="uInput" class="card fat" >
+						<div class="card-body" id="LoginPage">
+							<h4 class="card-title">Sign in</h4>
+							<form method="POST" id="myFormLogin" class="my-login-first" novalidate="">
+								<div class="form-group" >
+									<label for="username" class="fstyle">Username</label>
+									<input id="username" type="text" class="fstyle form-control " placeholder="Username" name="email" value="" required autofocus>
+									<div class="invalid-feedback">
+										The username is not recognized
+									</div>
+								</div>
+								<div class="form-group m-0">
+									<button type="button" id="nextButton" class="btn btn-block btn-primary" class="audoDeskButton">
+										Next
+									</button>
+								</div>
+								<div class="mt-2 text-center">
+									New to Autodesk? <a href="javascript:createAccount();">Create Account</a>
+								</div>
+							</form>
+						</div>
+					</div>
+
+
+					<div class="card-body" id="createAccountPage" style="display:none;">
+						<h4 class="card-title">Register</h4>
+						<form method="POST" id="myFormRegistration" action="index.html?from=registration" class="my-login-validation" novalidate="">
+
+
+							<div class="d-flex">
+								<div class="pull-left">
+									<div class="form-group">
+										<label for="ca-firstname">First name</label>
+										<input id="ca-firstname" type="text" class="form-control" name="ca-firstname" required>
+										<div class="invalid-feedback">
+											Please enter your first name
+										</div>
+									</div>
+							</div>
+							<div class="px-2"></div>
+							<div class="pull-right" >
+								<div class="form-group">
+									<label for="ca-lastname">Last name</label>
+									<input id="ca-lastname" type="text" class="form-control" name="ca-lastname" required>
+									<div class="invalid-feedback">
+										Please enter your last name
+									</div>
+								</div>
+
+							</div>
+							</div>
+
+
+							<div class="form-group">
+								<label for="ca-username">Username</label>
+								<input id="ca-username" type="text" class="form-control" name="ca-username" required>
+								<div class="invalid-feedback">
+									Please enter valid username
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="ca-retype-username">Re-type username</label>
+								<input id="ca-retype-username" type="text" class="form-control" name="ca-retype-username" required>
+								<div class="invalid-feedback">
+									Please enter same username
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label for="ca-password">Password</label>
+								<input id="ca-password" type="password" class="form-control" name="ca-password" required data-eye>
+								<div class="invalid-feedback">
+									Please enter password
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="ca-retype-password">Re-type Password</label>
+								<input id="ca-retype-password" type="password" class="form-control" name="ca-retype-password" required data-eye>
+								<div class="invalid-feedback">
+									Please enter same password
+								</div>
+							</div>
+
+
+
+							<div class="form-group m-0">
+								<button id="create-account" type="button" class="btn btn-primary btn-block">
+									Create Account
+								</button>
+							</div>
+							<div class="mt-4 text-center">
+								Already have an account? <a href="javascript:Signin();">Sign in</a>
+							</div>
+							<div class="ca-footer">
+								Your account for everything Autodesk<br/><a href="#">Learn More</a>
+							</div>
+						</form>
+
+					</div>
+
+					<div id="pInput" class="card fat" style="display:none" >
+						<div class="card-body" >
+							<div class="d-flex">
+								<div class="pull-left">
+        <a href="javascript:passwordToSignin();" class="back-arrow">  &lt; </a>
+      </div>
+  <div class="pull-right" style="text-align:center;width:90%" ><span class="font-heading">Welcome<span><br><span id="wuser" class="font-title"></span></div>
+</div>
+							<form method="POST" class="my-login-validation" novalidate="">
+								<div class="form-group">
+									<label for="password">Password
+									</label>
+									<input id="password" type="password" class="form-control" name="password" >
+										<div class="invalid-feedback">
+											Password is required
+										</div>
+								</div>
+								<div class="form-group m-0">
+									<button type="button" class="btn btn-block btn-primary" class="audoDeskButton">
+										Sign in
+									</button>
+								</div>
+							<!--	<div class="mt-2 text-center">
+									New to Autodesk? <a href="javascript:createAccount()">Create Account</a>
+								</div>
+							-->
+							</form>
+
+						</div>
+
+					</div>
+					<div class="footer">
+						Your account for everything Autodesk<br/><a href="#">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/my-login.js"></script>
+</body>
+</html>

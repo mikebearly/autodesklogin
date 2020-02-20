@@ -1,0 +1,188 @@
+html,body {
+	height: 100%;
+}
+
+a:link ,a:visited ,a:hover ,a:active {
+  color: #006eaf; !important
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #006eaf; !important;
+}
+.invalid-feedback {
+	background-color:#dcdcdc;
+	boder:1px solid #bbbbbb;
+	border-radius:4px;
+	color:#A9A9A9;
+	padding:7px;
+	margin-top: 0px;
+	margin-bottom:10px;
+	background-image: none; !important;
+	font-size: 14px;
+}
+.was-validated .custom-select:valid {
+  background-image: none;!important;
+}
+
+.was-validated .custom-select:invalid {
+  background-image: none;!important;
+}
+
+.font-heading {
+	font-size: 22px;
+	line-height: 28px;
+	color: #000000;
+}
+
+.font-title {
+	font-size: 14px;
+	line-height: 20px;
+	color: #808080;
+}
+
+.back-arrow{
+	color:#006eaf;
+	font-size: 20px;
+}
+
+.audoDeskButton {
+	color: #fff;
+	background-color: #006eaf;
+	border-color: #006eaf;
+}
+
+h4 {
+	font-size: 22px;
+	line-height: 28px;
+	color: #000000;
+}
+
+body.my-login-page {
+	background-color: #ffffff;
+	font-size: 14px;
+}
+
+.my-login-page .brand {
+	height: 90px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 40px auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	position: relative;
+	z-index: 1;
+}
+
+.my-login-page .brand img {
+	width: 100%;
+}
+
+.my-login-page .card-wrapper {
+	width: 400px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.my-login-page .card {
+	border-color: transparent;
+}
+
+.card-body {
+    padding-top: 48px;
+}
+
+.my-login-page .card .card-title {
+	margin-bottom: 24px;
+}
+
+.my-login-page .form-control {
+	border-width: 2.3px;
+}
+
+.my-login-page .form-group label {
+	width: 100%;
+}
+
+label {
+	margin-bottom: 8px;
+}
+
+.form-group {
+	margin-bottom: 16px;
+}
+
+.my-login-page .btn.btn-block {
+	padding: 8px 10px;
+}
+
+.my-login-page .footer {
+	color: #888;
+	text-align: center;
+}
+
+.footer{
+  bottom: 10px;
+  font-size: 12px; !important
+  width: 100%;
+  right: 0;
+  left: 0;
+	position: fixed;
+	padding-top: -40px;
+	bottom: 0;
+}
+
+.ca-footer{
+	text-align: center;
+  font-size: 12px; !important
+  width: 100%;
+  right: 0;
+  left: 0;
+	position: relative;
+	padding-top: 32px;
+	margin-bottom: -20px;
+	bottom: 0;
+}
+
+div.createAccountPage{
+	margin-bottom: 32px;
+}
+.toast{
+	font-size: 16px;
+	line-height: 22px;
+	color: #000000;
+	background: #38abdf;
+	opacity: 0.7;
+	border-radius: 4px;
+}
+div.toast-cover{
+	display: none;
+}
+.fstyle{
+	font-size: 16px;
+	line-height: 22px;
+	color: #3c3c3c;
+}
+.invaid-grey{
+	background-color:#dcdcdc;
+	border:1px solid #bbbbbb;
+	border-radius:4px;
+	color:#CCC;
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 425px) {
+	.my-login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.my-login-page .card.fat {
+		padding-left:30px;
+		padding-right:30px;
+	}
+
+	.my-login-page .card.fat .card-body {
+		padding-left:30px;
+		padding-right:30px;
+	}
+}
